@@ -15,7 +15,7 @@ builder.Services.AddMassTransit(x =>
     // x.AddConsumer<InventoryConsumer>();
     // x.AddConsumer<EmailOrderConfirmedConsumer>();
 
-    x.UsingInMemory((context, cfg) =>
+    x.UsingRabbitMq((context, cfg) =>
     {
         // cfg.Host("localhost", "/", h =>
         // {

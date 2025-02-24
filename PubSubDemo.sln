@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PubSubDemo", "PubSubDemo\PubSubDemo.csproj", "{2B25CAA5-879D-4DBB-925F-C58A72690312}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedLibrary", "SharedLibrary\SharedLibrary.csproj", "{3E1ADABF-4140-4FE6-8438-9041BF7522B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PubSubService", "PubSubService\PubSubService.csproj", "{61036A0D-33DB-489B-90A7-1EC0B484F2B6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{2B25CAA5-879D-4DBB-925F-C58A72690312}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B25CAA5-879D-4DBB-925F-C58A72690312}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B25CAA5-879D-4DBB-925F-C58A72690312}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E1ADABF-4140-4FE6-8438-9041BF7522B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E1ADABF-4140-4FE6-8438-9041BF7522B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E1ADABF-4140-4FE6-8438-9041BF7522B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E1ADABF-4140-4FE6-8438-9041BF7522B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61036A0D-33DB-489B-90A7-1EC0B484F2B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61036A0D-33DB-489B-90A7-1EC0B484F2B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61036A0D-33DB-489B-90A7-1EC0B484F2B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61036A0D-33DB-489B-90A7-1EC0B484F2B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
