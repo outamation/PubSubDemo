@@ -3,10 +3,10 @@ using PubSubDemo.Queues;
 
 namespace PubSubDemo.Consumer;
 
-public class InventoryConsumer : IConsumer<IOrder>
+public class SellerServiceConsumer : IConsumer<IOrder>
 {
     public async Task Consume(ConsumeContext<IOrder> context)
     {
-        Console.WriteLine($"[Inventory Service]: Order received successfully.");
+        Console.WriteLine($"[Seller Service]: Seller received order.");
     }
 }

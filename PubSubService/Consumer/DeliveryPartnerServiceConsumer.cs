@@ -3,7 +3,7 @@ using PubSubDemo.Queues;
 
 namespace PubSubDemo.Consumer;
 
-public class DeliveryPartnerConsumer : IConsumer<IOrderDispatch>
+public class DeliveryPartnerServiceConsumer : IConsumer<IOrderDispatch>
 {
     public async Task Consume(ConsumeContext<IOrderDispatch> context)
     {

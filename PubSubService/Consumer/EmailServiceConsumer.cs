@@ -3,7 +3,7 @@ using PubSubDemo.Queues;
 
 namespace PubSubDemo.Consumer;
 
-public class EmailConsumer : IConsumer<IEmail>
+public class EmailServiceConsumer : IConsumer<IEmail>
 {
     public async Task Consume(ConsumeContext<IEmail> context)
     {

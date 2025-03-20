@@ -11,30 +11,31 @@ builder.Services.AddTransient<DispatchOrderService>();
 
 builder.Services.AddMassTransit(x =>
 {
-    // x.AddConsumer<NotificationConsumer>();
-    // x.AddConsumer<InventoryConsumer>();
-    // x.AddConsumer<EmailOrderConfirmedConsumer>();
+    x.AddConsumer<SellerConsumer>();
+    x.AddConsumer<InventoryConsumer>();
+    x.AddConsumer<DeliveryPartnerConsumer>();
+    x.AddConsumer<EmailConsumer>();
 
     x.UsingRabbitMq((context, cfg) =>
     {
-        // cfg.Host("localhost", "/", h =>
+        cfg.Host("localhost", "/", h =>
+        {
+            h.Username("guest");
+            h.Password("guest");
+        });
+        // cfg.ReceiveEndpoint("create-order", ep =>
         // {
-        //     h.Username("guest");
-        //     h.Password("guest");
+        //     ep.Consumer<SellerConsumer>();
+        //     ep.Consumer<InventoryConsumer>();
         // });
-        cfg.ReceiveEndpoint("create-order", ep =>
-        {
-            ep.Consumer<SellerConsumer>();
-            ep.Consumer<InventoryConsumer>();
-        });
-        cfg.ReceiveEndpoint("dispatch-order", ep =>
-        {
-            ep.Consumer<DeliveryPartnerConsumer>();
-        });
-        cfg.ReceiveEndpoint("email", ep =>
-        {
-            ep.Consumer<EmailConsumer>();
-        });
+        // cfg.ReceiveEndpoint("dispatch-order", ep =>
+        // {
+        //     ep.Consumer<DeliveryPartnerConsumer>();
+        // });
+        // cfg.ReceiveEndpoint("email", ep =>
+        // {
+        //     ep.Consumer<EmailConsumer>();
+        // });
         cfg.ConfigureEndpoints(context);
     });
 });
